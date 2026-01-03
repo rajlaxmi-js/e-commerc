@@ -1,0 +1,155 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.btn button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn button:hover {
+  background-color: #2563eb;
+}
+
+.btn span {
+  background-color: #ef4444;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.items {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.items:hover {
+  transform: translateY(-6px);
+}
+
+.items img {
+
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.items h1 {
+  font-size: 13px;
+  color: gray;
+}
+
+.items h2 {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.items span {
+  display: block;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #16a34a;
+}
+
+.items p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+
+.items button {
+  padding: 8px 12px;
+  background-color: #f59e0b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.items button:hover {
+  background-color: #d97706;
+}
+
+
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .btn {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .btn button {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .items img {
+    height: 150px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 10px;
+  }
+
+  .items img {
+    height: 140px;
+  }
+}
